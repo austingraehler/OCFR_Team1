@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oconee County Fire Rescue</title>
+<!--    Style sheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--     jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
+<!--   JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+<header>
+
+
+
+        <h1> <img src="img/Emblem.png" class = "fade" height="150px" width="150">Oconee County Fire Rescue</h1>
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="certification.html">Certification Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="reports.html">Member Reports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user_login.html">Member Login</a>
+          </li>
+        </ul>
+
+</header>
+
+
+
+<main>
+
+    <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Member Reports</h2>
+
+    <p>Member Information</p>
+
+    <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+    <tr>
+      <th>MIB</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>DoB</th>
+      <th>Start Date</th>
+      <th>Gender</th>
+      <th>Position</th>
+      <th>Radio #</th>
+      <th>Status<th>
+    </tr>
+    <tr>
+      <td>0001</td>
+      <td>Maria</td>
+      <td>Anders</td>
+      <td>3719 Hillsboro Road</td>
+      <td>maria@gmail.com</td>
+      <td>(809) 282-7777</td>
+      <td>01-10-1997</td>
+      <td>10-10-2019</td>
+      <td>F</td>
+      <td>Deputy</td>
+      <td>3</td>
+      <td>Enrolled</td>
+    </tr>
+    <tr>
+      <td>0001</td>
+      <td>Maria</td>
+      <td>Anders</td>
+      <td>3719 Hillsboro Road</td>
+      <td>maria@gmail.com</td>
+      <td>(809) 282-7777</td>
+      <td>01-10-1997</td>
+      <td>10-10-2019</td>
+      <td>F</td>
+      <td>Deputy</td>
+      <td>3</td>
+      <td>Enrolled</td>
+    </tr>
+    <tr>
+      <td>0001</td>
+      <td>Maria</td>
+      <td>Anders</td>
+      <td>3719 Hillsboro Road</td>
+      <td>maria@gmail.com</td>
+      <td>(809) 282-7777</td>
+      <td>01-10-1997</td>
+      <td>10-10-2019</td>
+      <td>F</td>
+      <td>Deputy</td>
+      <td>3</td>
+      <td>Enrolled</td>
+    </tr>
+  </table>
+
+<br>
+<br>
+<p> Add Member </p>
+
+<form style="text-align: center; "@submit.prevent="handleSubmit">
+            <div class="form-group row">
+              <label for="inputMIB" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" id="inputMIB" placeholder="Member ID" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputFirstName" class="col-sm-2 col-lg-5 col-form-label">First Name</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputLastName" class="col-sm-2 col-lg-5 col-form-label">Last Name</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputEmailAddress" class="col-sm-2 col-lg-5 col-form-label">Email Address</label>
+              <div class="col-sm-2">
+                <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputPhoneNumber" class="col-sm-2 col-lg-5 col-form-label">Phone Number</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputDoB" class="col-sm-2 col-lg-5 col-form-label">Date of Birth</label>
+              <div class="col-sm-2">
+                <input type="date" class="form-control" id="inputDoB" placeholder="Date of Birth" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputStartDate" class="col-sm-2 col-lg-5 col-form-label">Start Date</label>
+              <div class="col-sm-2">
+                <input type="date" class="form-control" id="inputStartDate" placeholder="Start Date" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputGender" class="col-sm-2 col-lg-5 col-form-label">Gender</label>
+              <div class="col-sm-2">
+                <div>
+                  <input type="radio" id="huey" name="drone" value="huey">
+                  <label for="huey">Male</label>
+                </div>
+
+                <div>
+                  <input type="radio" id="dewey" name="drone" value="dewey">
+                  <label for="dewey">Female</label>
+                </div>
+
+                <div>
+                  <input type="radio" id="louie" name="drone" value="louie">
+                  <label for="louie">Other</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputPosition" class="col-sm-2 col-lg-5 col-form-label">Position</label>
+              <div class="col-sm-2">
+                <div>
+                  <input type="radio" id="cap" name="cap" value="cap">
+                  <label for="huey">Captain</label>
+                </div>
+
+                <div>
+                  <input type="radio" id="dewey" name="chief" value="chief">
+                  <label for="chief">Batallion Chief</label>
+                </div>
+
+                <div>
+                  <input type="radio" id="dewey" name="chief" value="chief">
+                  <label for="responder">First Responder</label>
+                </div>
+              </div>
+              </div>
+
+            <div class="form-group row">
+              <label for="inputRadioNumer" class="col-sm-2 col-lg-5 col-form-label">Radio Number</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" id="inputRadioNumber" placeholder="Radio Number" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputStatus" class="col-sm-2 col-lg-5 col-form-label">Status</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputStatus" placeholder="Status" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="userLogin" class="col-sm-2 col-lg-5 col-form-label"></label>
+              <div class="col-sm-2">
+                <button type="submit" class="btn btn-primary">Submit Member Report</button>
+              </div>
+            </div>
+          </form>
+
+
+</main>
+
+
+  <footer class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+
+
+     <p class="caption"> Oconee County Fire Rescue (OCFR) | 123 Sesame Street| Oconee County, GA | (546) - 543-8991  </p>
+
+
+
+</footer>
+</body>
+</html>
