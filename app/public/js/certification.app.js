@@ -10,7 +10,7 @@ var certificationApp = new Vue({
     fetchCertifications() {
       fetch('api/certification/')
       .then(response => response.json())
-      .then(json => { certificationApp.persons = json })
+      .then(json => { certificationApp.certifications = json })
     },
   }, // end methods
   created() {
