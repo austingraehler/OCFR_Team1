@@ -3,7 +3,7 @@ var certificationApp = new Vue({
   data: {
     personID: [],
     firstName: {},
-    lastName: {
+    lastName: {},
     address: '',
     email: [],
     phoneNumber: [],
