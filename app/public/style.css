@@ -9,71 +9,80 @@
 
 
 li{
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 10px
+
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px
 }
 
 
 html, body{
-  background-color:white;
-  position:relative;
-  height: 100%;
-}
+    background-color:white;
+    position:relative;
+    height: 100%;
+
+        }
 
 footer{
-  border: 3px solid black;
-  background-color:  #b03346;
-  border-top-left-radius: 75px;
-  border-top-right-radius: 75px;
-  color: white;
-  padding:5px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  right: 0px;
-  margin-bottom: 0px;
-  margin-top: 20px;
 
-  .nav {
-    background-color: #F5CBA7;
-    display:inline;
-}
+    border: 3px solid black;
+    background-color:  #b03346;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+    color: white;
+    padding:5px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0px;
+    margin-bottom: 0px;
+    margin-top: 20px;
 
+    .nav {
+      background-color: #F5CBA7;
+      display:inline;
+    }
 
 .nav-item {
   display: inline;
 }
 
-.nav-link {
-  color: #283747;
-}
+    .nav-link {
+      color: #283747;
+    }
 
-.nav-link:hover {
-  background-color: #CD6155;
-  color: white;
-}
-
-
-h1{
-
-    background-color: #b03346;
-    color: white;
-    text-align: center;
-    font-family: georgia, Comic Sans MS;
-    padding: 2px;
-    margin: 0px;
+    .nav-link:hover {
+      background-color: #CD6155;
+      color: white;
+    }
 }
 
 
-h2{
-  font-family: georgia, Comic Sans MS;
-   text-align: center;
-}
+        h1{
+
+            background-color: #b03346;
+            color: white;
+            text-align: center;
+            font-family: georgia, Comic Sans MS;
+            padding: 2px;
+            margin: 0px;
+
+        }
+
+
+         h2{
+
+            font-family: georgia, Comic Sans MS;
+             text-align: center;
+
+
+        }
 
 h3{
+
     font-family: georgia, Comic Sans MS;
+
 }
 
 
@@ -81,28 +90,32 @@ h3{
 
 
 p{
-    font-family: georgia, Comic Sans MS;
+
+      font-family: georgia, Comic Sans MS;
     text-align: center;
+
 }
 
 
 
 .center_abroad{
+
     margin-left: 50%;
+
 }
+        .fade {
 
+            opacity:.4;
+        }
 
-.fade {
-    opacity:.4;
-}
+        a{
 
+            color: black;
+            text-decoration: none;
+            text-align: center;
+            font-family: georgia;
 
-a{
-  color: black;
-  text-decoration: none;
-  text-align: center;
-  font-family: georgia;
-}
+        }
 
 
 .Hover:hover{
@@ -111,106 +124,99 @@ a{
 }
 
 .drop_down_bg{
-    background-color: #522D80;
+
+  background-color: #522D80;
+
 }
 
-.drop_down_stlye{
+.drop_down_style{
+
     background-color: #F66733;
     border: 1px solid #F66733;
     margin-top:5px;
-  }
-
-
-
-
+}
 
 .claw_img{
 
-  text-align: center;
-  padding-bottom: 5px;
-  opacity: .5;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  height: auto;
+    text-align: center;
+    padding-bottom: 5px;
+    opacity: .5;
+    padding-left: 20px;
+    padding-right: 20px;
+     width: 100%;
+    height: auto;
 }
-
-
-
 
 .caption{
-  margin-top: 20px;
-  display: block;
-  margin-bottom: 5px;
-  padding-bottom: 8px;
-
-}
-
-
+        margin-top: 20px;
+        display: block;
+        margin-bottom: 5px;
+        padding-bottom: 8px;
+    }
 
 .container_img{
 
-  height: 500px;
-  width: 300px;
+    height: 500px;
+        width: 300px;
 
-}
+    }
 
 .student_app_box{
-  border: 1px solid black;
-  border-radius: 25px;
-  margin: 5px;
-  padding: 10px;
-  margin-top: 30px;
-
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 5px;
+    padding: 10px;
+    margin-top: 30px;
 }
 
 .push_conf_page{
-  margin-bottom: 30%;
+       margin-bottom: 30%;
 }
 
 .conf_alert{
-  margin:5px;
-  margin-top: 50px;
+    margin:5px;
+    margin-top: 50px;
 }
 
-table {
-  border: 1px solid black;
-}
+    table {
+    border: 1px solid black;
+    }
 
-tbody, td{
-  border: 1px solid black;
-  padding-left: 2px;
-}
+    tbody, td{
+    border: 1px solid black;
+    padding-left: 2px;
+    }
 
-thead {
-  background-color:#b03346;
-  Color:white;
-  padding-bottom: 2px;
-  padding-top: 2px;
-}
+    thead {
+        background-color:#522D80;
+        Color:white;
+        padding-bottom: 2px;
+        padding-top: 2px;
+    }
 
-th {
-  padding-bottom: 4px;
-  padding-top: 4px;
-  padding-left: 3px;
-  text-align: center;
-}
+    th {
+        padding-bottom: 4px;
+        padding-top: 4px;
+        padding-left: 3px;
+        text-align: center;
+    }
 
-tfoot {
-  background-color:#b03346;
-  Color:white;
-  padding-bottom: 2px;
-  padding-top: 2px;
-}
+    tfoot {
+        background-color:#522D80;
+        Color:white;
+        padding-bottom: 2px;
+        padding-top: 2px;
+    }
 
 td{
-  text-align: center;
+
+    text-align: center;
 }
 
 
-tr:nth-child(even) {
+    tr:nth-child(even) {
   background-color: #E6E6F9;
-}
+    }
 
 
 
