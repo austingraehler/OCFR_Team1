@@ -49,10 +49,12 @@
 
     <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Member Reports</h2>
 
+&nbsp
     <p>Member Information</p>
+&nbsp
 
     <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-    <tr>
+    <thead>
       <th>MID</th>
       <th>First Name</th>
       <th>Last Name</th>
@@ -65,8 +67,9 @@
       <th>Position</th>
       <th>Radio #</th>
       <th>Station Number</th>
-      <th>Status<th>
-    </tr>
+      <th>Status</th>
+    </thead>
+
     <tr>
       <td>0001</td>
       <td>Maria</td>
@@ -116,7 +119,9 @@
 
 <br>
 <br>
+&nbsp
 <p> Add Member </p>
+&nbsp
 
 <form style="text-align: center; "@submit.prevent="handleSubmit">
             <div class="form-group row">
@@ -206,12 +211,19 @@
                   <label for="responder">First Responder</label>
                 </div>
               </div>
-              </div>
+            </div>
 
             <div class="form-group row">
-              <label for="inputRadioNumer" class="col-sm-2 col-lg-5 col-form-label">Radio Number</label>
+              <label for="inputRadioNumber" class="col-sm-2 col-lg-5 col-form-label">Radio Number</label>
               <div class="col-sm-2">
                 <input type="number" class="form-control" id="inputRadioNumber" placeholder="Radio Number" v-model="">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputStationNumber" class="col-sm-2 col-lg-5 col-form-label">Station Number</label>
+              <div class="col-sm-2">
+                <input type="number" class="form-control" id="inputStationNumber" placeholder="Station Number" v-model="">
               </div>
             </div>
 
