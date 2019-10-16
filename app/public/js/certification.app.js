@@ -1,53 +1,33 @@
 var certificationApp = new Vue({
-  el: '#memberCertificationsApp',
+  el: '#certificationApp',
   data: {
-    personID: [],
-    firstName: {},
-    lastName: {},
-    address: '',
-    email: [],
-    phoneNumber: [],
-    dob: '',
-    startDate: '',
-    gender: '',
-    }
+    certification: {}
   },
   methods: {
-    fetchClient() {
-      fetch('api/records/')
-      .then(response => response.json())
-      .then(json => { patientRecordsApp.patients = json })
-    },
-    handleSubmit(event) {
-      fetch('api/records/post.php', {
+    handleSubmit() {
+      fetch('/api/certification/post.php', {
         method:'POST',
-        body: JSON.stringify(this.recordPatient),
+        body: JSON.stringify(this.certification),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
       })
-      .then( response => response.json() )
-      .then( json => { patientRecordsApp.patients.push(json[0]) })
-      .catch( err => {
-        console.error('RECORD POST ERROR:');
-        console.error(err);
-      })
+      .then(response => response.json())
+      .then(json => { waitingApp.certifications = json })
+
       this.handleReset();
     },
     handleReset() {
-      this.recordPatient = {
-        firstName: '',
-        lastName: '',
-        dob: '',
-        sexAtBirth: ''
+      this.certification = {
+        PersonID: '',
+        certificationID: '',
+        expirationDate: '',
+        renewalDate: ''
       }
-    },
-    handleRowClick(patient) {
-      patientTriageApp.patient = patient;
     }
-  }, // end methods
+  },
+
   created() {
     this.handleReset();
-    this.fetchPatients();
   }
 });
