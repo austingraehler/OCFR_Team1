@@ -20,28 +20,39 @@
 
 </head>
 <body>
-<header>
+  <header>
+
+          <h1> <img src="img/Emblem.png" class = "fade" height="150px" width="150">Oconee County Fire Rescue</h1>
+
+          <nav class="row navbar navbar-default navbar-custom">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                      <span class="icon-bar" style="color: black"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+              </div>
+
+              <div id="menu" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="certification.html">Certification Reports</a>
+                      </li>
+                      <li>
+                          <a href="reports.html">Member Reports</a>
+                      </li>
+                      <li>
+                          <a href="user_login.html">Member Login</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
 
 
-
-        <h1> <img src="img/Emblem.png" class = "fade" height="150px" width="150">Oconee County Fire Rescue</h1>
-
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="certification.html">Certification Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reports.html">Member Reports</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="user_login.html">Member Login</a>
-          </li>
-        </ul>
-
-</header>
+  </header>
 
 
 
@@ -61,7 +72,7 @@
 </tr>
 <tr v-for="c in certification" @click="handleRowClick(c)">
   <td>{{ c.certificationID }}</td>
-  <td>{{ c.Agency }}</td>
+  <td>{{ c.agency }}</td>
   <td>{{ c.certficationName }}</td>
   <td>{{ c.standardExpiry }}</td>
 </tr>
@@ -73,39 +84,16 @@
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
 <tr>
   <th>MID</th>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Position</th>
-  <th>Status</th>
-  <th>Certifications</th>
+  <th>CID</th>
   <th>Expiration Date</th>
+  <th>Renewal Date</th>
 </tr>
-<tr>
-  <td>0001</td>
-  <td>Maria</td>
-  <td>Anders</td>
-  <td>Captain</td>
-  <td>Active</td>
-  <td>Firefighter 1 (Athens Technical College)</td>
-  <td>11/20/2020</td>
+<tr v-for="i in PersonCertification" @click="handleRowClick(i)">
+  <td>{{ i.PersonID }}</td>
+  <td>{{ i.certificationID }}</td>
+  <td>{{ i.expirationDate }}</td>
+  <td>{{ i.renewalDate }}</td>
 </tr>
-<tr>
-  <td>0002</td>
-  <td>John</td>
-  <td>Madden</td>
-  <td>Captain</td>
-  <td>Active</td>
-  <td>POST</td>
-  <td>11/20/220</td>
-</tr>
-<tr>
-  <td>0003</td>
-  <td>Steve</td>
-  <td>Smith</td>
-  <td>First Responder</td>
-  <td>Active</td>
-  <td>Firefighter 1 (Athens Technical College)</td>
-  <td>6/06/2020</td>
 </table>
 
 
@@ -114,65 +102,20 @@
   <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
   <tr>
     <th>MID</th>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Position</th>
-    <th>Status</th>
-    <th>Certifications</th>
+    <th>CID</th>
     <th>Expiration Date</th>
-    <th>Start Date</th>
-    <th>Gender</th>
-    <th>Position</th>
-    <th>Radio Number</th>
-    <th>Station Number</th>
-    <th>Is Active</th>
+    <th>Renewal Date</th>
   </tr>
 
-<!--  <tr>
-    <td>0001</td>
-    <td>Maria</td>
-    <td>Anders</td>
-    <td>Captain</td>
-    <td>Active</td>
-    <td>Firefighter 1 (Athens Technical College)</td>
-    <td>11/20/2020</td>
-  </tr>
-  <tr>
-    <td>0002</td>
-    <td>John</td>
-    <td>Madden</td>
-    <td>Captain</td>
-    <td>Active</td>
-    <td>POST</td>
-    <td>11/20/220</td>
-  </tr>
-  <tr>
-    <td>0003</td>
-    <td>Steve</td>
-    <td>Smith</td>
-    <td>First Responder</td>
-    <td>Active</td>
-    <td>Firefighter 1 (Athens Technical College)</td>
-    <td>6/06/2020</td>
-  </tr>
-
+<!--
 // This will be the info taken from the database.
 -->
 
-  <tr v-for="p in person" @click="handleRowClick(p)">
-    <td>{{ p.personID }}</td>
-    <td>{{ p.firstName }}</td>
-    <td>{{ p.lastName }}</td>
-    <td>{{ p.address }}</td>
-    <td>{{ p.email }}</td>
-    <td>{{ p.phoneNumber }}</td>
-    <td>{{ p.dob }}</td>
-    <td>{{ p.startDate }}</td>
-    <td>{{ p.gender }}</td>
-    <td>{{ p.position }}</td>
-    <td>{{ p.radioNumber }}</td>
-    <td>{{ p.stationNumber }}</td>
-    <td>{{ p.isActive }}</td>
+  <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
+    <td>{{ i.PersonID }}</td>
+    <td>{{ i.certificationID }}</td>
+    <td>{{ i.expirationDate }}</td>
+    <td>{{ i.renewalDate }}</td>
   </tr>
   </table>
 
