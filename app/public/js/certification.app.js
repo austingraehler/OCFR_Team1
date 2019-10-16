@@ -1,33 +1,19 @@
 var certificationApp = new Vue({
   el: '#certificationApp',
   data: {
-    certification: {}
+    certificationID: [],
+    agency: {},
+    certificationName: {},
+    standardExpiry: {}
   },
   methods: {
-    handleSubmit() {
-      fetch('/api/certification/post.php', {
-        method:'POST',
-        body: JSON.stringify(this.certification),
-        headers: {
-          "Content-Type": "application/json; charset=utf-8"
-        }
-      })
+    fetchCertifications() {
+      fetch('api/certification/')
       .then(response => response.json())
-      .then(json => { waitingApp.certifications = json })
-
-      this.handleReset();
+      .then(json => { certificationApp.persons = json })
     },
-    handleReset() {
-      this.certification = {
-        PersonID: '',
-        certificationID: '',
-        expirationDate: '',
-        renewalDate: ''
-      }
-    }
-  },
-
+  }, // end methods
   created() {
-    this.handleReset();
+    this.fetchCertifications();
   }
 });
