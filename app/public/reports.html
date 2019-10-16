@@ -141,37 +141,38 @@
 -->
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
 
-<tr>
-  <th>MID</th>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Address</th>
-  <th>Email</th>
-  <th>Phone</th>
-  <th>DoB</th>
-  <th>Start Date</th>
-  <th>Gender</th>
-  <th>Position</th>
-  <th>Radio Number</th>
-  <th>Station Number</th>
-  <th>Status<th>
-</tr>
+  <thead>
+    <th>MID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>DoB</th>
+    <th>Start Date</th>
+    <th>Gender</th>
+    <th>Position</th>
+    <th>Radio Number</th>
+    <th>Station Number</th>
+    <th>Status</th>
+  </thead>
 
-<tr v-for="p in Person" @click="handleRowClick(p)">
-  <td>{{ p.personID }}</td>
-  <td>{{ p.firstName }}</td>
-  <td>{{ p.lastName }}</td>
-  <td>{{ p.address }}</td>
-  <td>{{ p.email }}</td>
-  <td>{{ p.phoneNumber }}</td>
-  <td>{{ p.dob }}</td>
-  <td>{{ p.startDate }}</td>
-  <td>{{ p.gender }}</td>
-  <td>{{ p.position }}</td>
-  <td>{{ p.radioNumber }}</td>
-  <td>{{ p.stationNumber }}</td>
-  <td>{{ p.isActive }}</td>
-</tr>
+  <tr v-for="p in Person" @click="handleRowClick(p)">
+    <td>{{ p.personID }}</td>
+    <td>{{ p.firstName }}</td>
+    <td>{{ p.lastName }}</td>
+    <td>{{ p.address }}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.phoneNumber }}</td>
+    <td>{{ p.dob }}</td>
+    <td>{{ p.startDate }}</td>
+    <td>{{ p.gender }}</td>
+    <td>{{ p.position }}</td>
+    <td>{{ p.radioNumber }}</td>
+    <td>{{ p.stationNumber }}</td>
+    <td>{{ p.isActive }}</td>
+  </tr>
+
 </table>
 
 
@@ -186,7 +187,7 @@
 <p> Add Member </p>
 &nbsp
 
-<form style="text-align: center; "@submit.prevent="handleSubmit">
+<form class="formCenter" @submit.prevent="handleSubmit">
             <div class="form-group row">
               <label for="inputMIB" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
               <div class="col-sm-2">
@@ -265,12 +266,12 @@
                 </div>
 
                 <div>
-                  <input type="radio" id="dewey" name="chief" value="chief">
+                  <input type="radio" id="batallion" name="chief" value="chief">
                   <label for="chief">Batallion Chief</label>
                 </div>
 
                 <div>
-                  <input type="radio" id="dewey" name="chief" value="chief">
+                  <input type="radio" id="fresponder" name="chief" value="chief">
                   <label for="responder">First Responder</label>
                 </div>
               </div>
