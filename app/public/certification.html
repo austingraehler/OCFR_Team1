@@ -54,34 +54,16 @@
 
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
 <tr>
+  <th>Certification ID</th>
+  <th>Agency</th>
   <th>Certification Name</th>
-  <th>Certification Agency</th>
-  <th>Default Expiration Period (years)</th>
+  <th>Standard Expiration Period (years)</th>
 </tr>
-<tr>
-  <td>CPR (CPR for Healthcare Providers)</td>
-  <td>American Heart Association</td>
-  <td>2</td>
-</tr>
-<tr>
-  <td>CPR (CPR for the Professional Rescuer)</td>
-  <td>American Red Cross</td>
-  <td>2</td>
-</tr>
-<tr>
-  <td>Firefighter I </td>
-  <td>Athens Technical College</td>
-  <td>3</td>
-</tr>
-<tr>
-  <td>FireFighter 1</td>
-  <td>Ivy Technical College</td>
-  <td>3</td>
-</tr>
-<tr>
-  <td>POST</td>
-  <td>Georgia POST Academy</td>
-  <td>5</td>
+<tr v-for="c in certification" @click="handleRowClick(c)">
+  <td>{{ c.certificationID }}</td>
+  <td>{{ c.Agency }}</td>
+  <td>{{ c.certficationName }}</td>
+  <td>{{ c.standardExpiry }}</td>
 </tr>
 </table>
 
@@ -173,8 +155,9 @@
     <td>Firefighter 1 (Athens Technical College)</td>
     <td>6/06/2020</td>
   </tr>
--->
+
 // This will be the info taken from the database.
+-->
 
   <tr v-for="p in person" @click="handleRowClick(p)">
     <td>{{ p.personID }}</td>
@@ -193,27 +176,7 @@
   </tr>
   </table>
 
-// Vue.js connection
-  <tr v-for="p in person" @click="handleRowClick(p)">
 
-//                v-if="filter.sab=='' || filter.sab == p.sexAtBirth">
-// Add functionality to sort sort/filter the table.
-// Most likely by position.
-
-                  <td>{{ p.personID }}</td>
-                  <td>{{ p.firstName }}</td>
-                  <td>{{ p.lastName }}</td>
-                  <td>{{ p.address }}</td>
-                  <td>{{ p.email }}</td>
-                  <td>{{ p.phoneNumber }}</td>
-                  <td>{{ p.dob }}</td>
-                  <td>{{ p.startDate }}</td>
-                  <td>{{ p.gender }}</td>
-                  <td>{{ p.position }}</td>
-                  <td>{{ p.radioNumber }}</td>
-                  <td>{{ p.stationNumber }}</td>
-                  <td>{{ p.isActive }}</td>
-                </tr>
 
 </main>
 
