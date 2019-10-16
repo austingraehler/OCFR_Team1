@@ -60,6 +60,11 @@
 
     <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Certification Reports</h2>
 
+
+<!--
+CERTIFICATION LIST <table>
+-->
+</table>
 <br>
 <p> Certification List </p>
 
@@ -78,8 +83,11 @@
 </tr>
 </table>
 
-<br>
 
+<!--
+MEMBER CERTIFICATION: EXPIRED TABLE
+-->
+<br>
 <p> Member Certifications: Expired</p>
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
 <tr>
@@ -97,6 +105,9 @@
 </table>
 
 
+<!--
+MEMBER CERTIFICATION: CURRENT TABLE
+-->
 <br>
 <p> Member Certifications: Current</p>
   <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
@@ -107,10 +118,6 @@
     <th>Renewal Date</th>
   </tr>
 
-<!--
-// This will be the info taken from the database.
--->
-
   <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
     <td>{{ i.PersonID }}</td>
     <td>{{ i.certificationID }}</td>
@@ -119,9 +126,10 @@
   </tr>
   </table>
 
-
-
 </main>
+
+
+
 
 
   <footer class="col-xs-12 col-s-12 col-md-12 col-lg-12">
