@@ -51,8 +51,8 @@
 
     <p>Member Information</p>
 
-    <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-    <tr>
+
+<!--    <tr>
       <th>MID</th>
       <th>First Name</th>
       <th>Last Name</th>
@@ -112,6 +112,54 @@
       <td>7</td>
       <td>Enrolled</td>
     </tr>
+-->
+
+<!--
+// Vue.js connection
+// v-if="filter.sab=='' || filter.sab == p.sexAtBirth">
+// Add functionality to sort sort/filter the table.
+// Most likely by position.
+-->
+    <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+
+<tr>
+  <th>MID</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Address</th>
+  <th>Email</th>
+  <th>Phone</th>
+  <th>DoB</th>
+  <th>Start Date</th>
+  <th>Gender</th>
+  <th>Position</th>
+  <th>Radio #</th>
+  <th>Station Number</th>
+  <th>Status<th>
+</tr>
+
+<tr v-for="p in person" @click="handleRowClick(p)">
+  <td>{{ p.personID }}</td>
+  <td>{{ p.firstName }}</td>
+  <td>{{ p.lastName }}</td>
+  <td>{{ p.address }}</td>
+  <td>{{ p.email }}</td>
+  <td>{{ p.phoneNumber }}</td>
+  <td>{{ p.dob }}</td>
+  <td>{{ p.startDate }}</td>
+  <td>{{ p.gender }}</td>
+  <td>{{ p.position }}</td>
+  <td>{{ p.radioNumber }}</td>
+  <td>{{ p.stationNumber }}</td>
+  <td>{{ p.isActive }}</td>
+</tr>
+</table>
+
+
+
+
+
+
   </table>
 
 <br>
@@ -242,5 +290,11 @@
 
 
 </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/certifiation.app.js"></script>
+  <script src="js/member.app.js"></script>
+
 </body>
 </html>

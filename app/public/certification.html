@@ -134,12 +134,19 @@
     <th>MID</th>
     <th>First Name</th>
     <th>Last Name</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Phone Number</th>
+    <th>Date of Birth</th>
+    <th>Start Date</th>
+    <th>Gender</th>
     <th>Position</th>
-    <th>Status</th>
-    <th>Certifications</th>
-    <th>Expiration Date</th>
+    <th>Radio Number</th>
+    <th>Station Number</th>
+    <th>Is Active</th>
   </tr>
-  <tr>
+
+<!--  <tr>
     <td>0001</td>
     <td>Maria</td>
     <td>Anders</td>
@@ -165,9 +172,48 @@
     <td>Active</td>
     <td>Firefighter 1 (Athens Technical College)</td>
     <td>6/06/2020</td>
+  </tr>
+-->
+// This will be the info taken from the database.
+
+  <tr v-for="p in person" @click="handleRowClick(p)">
+    <td>{{ p.personID }}</td>
+    <td>{{ p.firstName }}</td>
+    <td>{{ p.lastName }}</td>
+    <td>{{ p.address }}</td>
+    <td>{{ p.email }}</td>
+    <td>{{ p.phoneNumber }}</td>
+    <td>{{ p.dob }}</td>
+    <td>{{ p.startDate }}</td>
+    <td>{{ p.gender }}</td>
+    <td>{{ p.position }}</td>
+    <td>{{ p.radioNumber }}</td>
+    <td>{{ p.stationNumber }}</td>
+    <td>{{ p.isActive }}</td>
+  </tr>
   </table>
 
+// Vue.js connection
+  <tr v-for="p in person" @click="handleRowClick(p)">
 
+//                v-if="filter.sab=='' || filter.sab == p.sexAtBirth">
+// Add functionality to sort sort/filter the table.
+// Most likely by position.
+
+                  <td>{{ p.personID }}</td>
+                  <td>{{ p.firstName }}</td>
+                  <td>{{ p.lastName }}</td>
+                  <td>{{ p.address }}</td>
+                  <td>{{ p.email }}</td>
+                  <td>{{ p.phoneNumber }}</td>
+                  <td>{{ p.dob }}</td>
+                  <td>{{ p.startDate }}</td>
+                  <td>{{ p.gender }}</td>
+                  <td>{{ p.position }}</td>
+                  <td>{{ p.radioNumber }}</td>
+                  <td>{{ p.stationNumber }}</td>
+                  <td>{{ p.isActive }}</td>
+                </tr>
 
 </main>
 
@@ -180,5 +226,11 @@
 
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/certifiation.app.js"></script>
+  <script src="js/member.app.js"></script>
+
 </body>
 </html>
