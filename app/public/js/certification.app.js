@@ -11,7 +11,7 @@ var certificationApp = new Vue({
     fetchCertifications() {
       fetch('api/certification/index.php')
       .then(response => response.json())
-      .then(json => { certificationApp.certifications = json })
+      .then(json => { certificationApp.certifications = json });
     }
   }, // end methods
   created() {

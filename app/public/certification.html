@@ -68,12 +68,12 @@ CERTIFICATION LIST <table>
 <p> Certification List </p>
 
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-<tr>
+<thead>
   <th>Certification ID</th>
   <th>Agency</th>
   <th>Certification Name</th>
   <th>Standard Expiration Period (years)</th>
-</tr>
+</thead>
 <tr v-for="c in certification" @click="handleRowClick(c)">
   <td>{{ c.certificationID }}</td>
   <td>{{ c.agency }}</td>
@@ -132,12 +132,12 @@ MEMBER CERTIFICATION: EXPIRED TABLE
 <br>
 <p> Member Certifications: Expired</p>
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-<tr>
+<thead>
   <th>MID</th>
   <th>CID</th>
   <th>Expiration Date</th>
   <th>Renewal Date</th>
-</tr>
+</thead>
 <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
   <td>{{ i.PersonID }}</td>
   <td>{{ i.certificationID }}</td>
@@ -153,12 +153,12 @@ MEMBER CERTIFICATION: CURRENT TABLE
 <br>
 <p> Member Certifications: Current</p>
   <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-  <tr>
+  <thead>
     <th>MID</th>
     <th>CID</th>
     <th>Expiration Date</th>
     <th>Renewal Date</th>
-  </tr>
+  </thead>
 
   <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
     <td>{{ i.PersonID }}</td>
