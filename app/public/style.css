@@ -196,7 +196,7 @@ p{
     }
 
     thead {
-        background-color:#522D80;
+        background-color:black;
         Color:white;
         padding-bottom: 2px;
         padding-top: 2px;
@@ -225,44 +225,3 @@ td{
     tr:nth-child(even) {
   background-color: #E6E6F9;
     }
-
-
-
-/*Social Media Icons*/
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
-.fa-instagram {
-  background: #125688;
-  color: white;
-}
-.fa-snapchat-ghost {
-  background: #fffc00;
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.fa {
-  padding: 5px;
-  font-size: 15px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  margin:20px 5px;
-    border-radius: 25px;
-    float: right;
-}
