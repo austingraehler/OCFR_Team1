@@ -186,35 +186,35 @@ p{
     margin-top: 50px;
 }
 
-    table {
-    border: 1px solid black;
-    }
+table {
+border: 1px solid black;
+}
 
-    tbody, td{
-    border: 1px solid black;
-    padding-left: 2px;
-    }
+tbody, td{
+border: 1px solid black;
+padding-left: 2px;
+}
 
-    thead {
-        background-color:black;
-        Color:white;
-        padding-bottom: 2px;
-        padding-top: 2px;
-    }
+thead {
+    background-color:#b8b8b8;
+    Color:white;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
 
-    th {
-        padding-bottom: 4px;
-        padding-top: 4px;
-        padding-left: 3px;
-        text-align: center;
-    }
+th {
+    padding-bottom: 4px;
+    padding-top: 4px;
+    padding-left: 3px;
+    text-align: center;
+}
 
-    tfoot {
-        background-color:#522D80;
-        Color:white;
-        padding-bottom: 2px;
-        padding-top: 2px;
-    }
+tfoot {
+    background-color:#522D80;
+    Color:white;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
 
 td{
 
