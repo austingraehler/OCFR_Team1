@@ -12,9 +12,6 @@ $stmt = $db->prepare(
   VALUES (?,?,?,?)'
 );
 
-
-$certificationID = Uuid::uuid4()->toString();
-
 $stmt->execute([
   $certificationID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
   $_POST['agency'],
