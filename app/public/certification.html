@@ -78,7 +78,7 @@ CERTIFICATION LIST <table>
   <tr v-for="c in certifications" @click="handleRowClick(c)">
     <td>{{ c.certificationID }}</td>
     <td>{{ c.agency }}</td>
-    <td>{{ c.certficationName }}</td>
+    <td>{{ c.certificationName }}</td>
     <td>{{ c.standardExpiry }}</td>
   </tr>
   </table>
@@ -130,6 +130,7 @@ CERTIFICATION LIST <table>
 <br>
 <div id="memberCertApp">
 <p> Member Certifications</p>
+<p>{{ memberCerts }}</p>
   <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
   <thead>
     <th>MID</th>
