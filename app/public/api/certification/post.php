@@ -1,5 +1,4 @@
 <?php
-use Ramsey\Uuid\Uuid;
 
 // Step 0: Validate data
 
