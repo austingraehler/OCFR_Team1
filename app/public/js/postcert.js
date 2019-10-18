@@ -18,7 +18,7 @@ var certForm = new Vue({
         }
       })
       .then( response => response.json() )
-      .then( json => { certificationApp.formData = json})
+      .then( json => { certForm.formData.push(json[0]) })
       .catch( err => {
         console.error('WORK TRIAGE ERROR:');
         console.error(err);
@@ -35,6 +35,8 @@ var certForm = new Vue({
       }
     }
   },
+
+
   created() {
     this.handleReset();
   }
