@@ -1,12 +1,10 @@
 var certForm = new Vue({
   el: '#certForm',
-  data: {
-    formData: {
+  formData: {
         cid: '',
         agency: '',
         name: '',
         expiry: ''
-    }
   },
   methods: {
     handleSubmit() {
@@ -38,6 +36,7 @@ var certForm = new Vue({
 
 
   created() {
+    this.handleSubmit();
     this.handleReset();
   }
 });
