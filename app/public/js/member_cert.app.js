@@ -4,7 +4,7 @@ var memberCertApp = new Vue({
     memberCerts: [],
   },
   methods: {
-    fetchCertifications() {
+    fetchMemberCerts() {
       fetch('api/person/index.php')
       .then(response => response.json())
       .then(json => { memberCertApp.memberCerts = json });
@@ -14,6 +14,6 @@ var memberCertApp = new Vue({
     }
   }, // end methods
   created() {
-    this.fetchCertifications();
+    this.fetchMemberCerts();
   }
 });
