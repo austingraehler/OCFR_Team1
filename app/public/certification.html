@@ -134,13 +134,13 @@ MEMBER CERTIFICATION: EXPIRED TABLE
   <th>MID</th>
   <th>CID</th>
   <th>Expiration Date</th>
-  <th>Renewal Date</th>
+  <th>Start Date</th>
 </thead>
 <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
   <td>{{ i.PersonID }}</td>
   <td>{{ i.certificationID }}</td>
   <td>{{ i.expirationDate }}</td>
-  <td>{{ i.renewalDate }}</td>
+  <td>{{ i.startDate }}</td>
 </tr>
 </table>
 
@@ -155,14 +155,14 @@ MEMBER CERTIFICATION: CURRENT TABLE
     <th>MID</th>
     <th>CID</th>
     <th>Expiration Date</th>
-    <th>Renewal Date</th>
+    <th>Start Date</th>
   </thead>
 
   <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
-    <td>{{ i.PersonID }}</td>
+    <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
-    <td>{{ i.renewalDate }}</td>
+    <td>{{ i.startDate }}</td>
   </tr>
   </table>
 
