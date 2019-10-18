@@ -1,7 +1,7 @@
 # Copy this file and rename it `env`
 # Do NOT ever include your *real* env in version control
 
-MYSQL_DATABASE=dnsfinalprojectteamone
+MYSQL_DATABASE=OCFR
 MYSQL_HOST=dnsfinalprojectteamone.cxapvh4ekcts.us-east-1.rds.amazonaws.com
 MYSQL_USER=pristinepressure
 MYSQL_PASSWORD=coolbeans
