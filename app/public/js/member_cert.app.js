@@ -6,7 +6,7 @@ var memberCertApp = new Vue({
       mid: '',
       cid: '',
       date: '',
-      start: '',
+      start: ''
     }
   },
   methods: {
