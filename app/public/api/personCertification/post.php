@@ -9,7 +9,7 @@ $db = DbConnection::getConnection();
 // Step 2: Prepare & run the query
 $stmt = $db->prepare(
 'INSERT INTO PersonCertification
-(personID, certificationID, expirationDate, renewalDate)
+(personID, certificationID, expirationDate, startlDate)
 VALUES (?,?,?,?)'
 );
 
@@ -18,8 +18,9 @@ $personID = Uuid::uuid4()->toString();
 
 $stmt->execute([
   $personID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
+  $_POST['certificationID'],
   $_POST['expirationDate'],
-  $_POST['renewalDate'],
+  $_POST['startDate'],
 ]);
 
 // Step 4: Output
