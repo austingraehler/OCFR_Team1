@@ -2,10 +2,16 @@ var memberCertApp = new Vue({
   el: '#memberCertApp',
   data: {
     memberCerts: [],
+    memberCertData: {
+      mid: '',
+      cid: '',
+      date: '',
+      start: '',
+    }
   },
   methods: {
     fetchMemberCerts() {
-      fetch('api/person/index.php')
+      fetch('api/personCertification/index.php')
       .then(response => response.json())
       .then(json => { memberCertApp.memberCerts = json });
     },

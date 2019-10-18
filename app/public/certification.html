@@ -136,7 +136,7 @@ CERTIFICATION LIST <table>
     <th>Start Date</th>
   </thead>
 
-  <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
+  <tr v-for="i in memberCerts" @click="handleRowClick(i)">
     <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
