@@ -60,85 +60,8 @@
 
     <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Member Reports</h2>
 
-&nbsp
-    <p>Member Information</p>
-&nbsp
-
-
-
-<!--    <tr>
-=======
-    <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-    <thead>
->>>>>>> 0ee183c5b1055103dc1b1e2c9171fe0074c56b8c
-      <th>MID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>DoB</th>
-      <th>Start Date</th>
-      <th>Gender</th>
-      <th>Position</th>
-      <th>Radio #</th>
-      <th>Station Number</th>
-      <th>Status</th>
-    </thead>
-
-    <tr>
-      <td>0001</td>
-      <td>Maria</td>
-      <td>Anders</td>
-      <td>3719 Hillsboro Road</td>
-      <td>maria@gmail.com</td>
-      <td>(809) 282-7777</td>
-      <td>01-10-1997</td>
-      <td>10-10-2019</td>
-      <td>F</td>
-      <td>Deputy</td>
-      <td>3</td>
-      <td>7</td>
-      <td>Enrolled</td>
-    </tr>
-    <tr>
-      <td>0001</td>
-      <td>Maria</td>
-      <td>Anders</td>
-      <td>3719 Hillsboro Road</td>
-      <td>maria@gmail.com</td>
-      <td>(809) 282-7777</td>
-      <td>01-10-1997</td>
-      <td>10-10-2019</td>
-      <td>F</td>
-      <td>Deputy</td>
-      <td>3</td>
-      <td>7</td>
-      <td>Enrolled</td>
-    </tr>
-    <tr>
-      <td>0001</td>
-      <td>Maria</td>
-      <td>Anders</td>
-      <td>3719 Hillsboro Road</td>
-      <td>maria@gmail.com</td>
-      <td>(809) 282-7777</td>
-      <td>01-10-1997</td>
-      <td>10-10-2019</td>
-      <td>F</td>
-      <td>Deputy</td>
-      <td>3</td>
-      <td>7</td>
-      <td>Enrolled</td>
-    </tr>
--->
-
-<!--
-// Vue.js connection
-// v-if="filter.sab=='' || filter.sab == p.sexAtBirth">
-// Add functionality to sort sort/filter the table.
-// Most likely by position.
--->
+<div id="memberApp">
+<p>Member Information</p>
 <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
 
   <thead>
@@ -157,7 +80,7 @@
     <th>Status</th>
   </thead>
 
-  <tr v-for="p in Person" @click="handleRowClick(p)">
+  <tr v-for="p in members" @click="handleRowClick(p)">
     <td>{{ p.personID }}</td>
     <td>{{ p.firstName }}</td>
     <td>{{ p.lastName }}</td>
