@@ -126,32 +126,10 @@ CERTIFICATION LIST <table>
   </form>
 </div>
 
-<!--
-MEMBER CERTIFICATION: EXPIRED TABLE
--->
-<br>
-<p> Member Certifications: Expired</p>
-<table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
-<thead>
-  <th>MID</th>
-  <th>CID</th>
-  <th>Expiration Date</th>
-  <th>Start Date</th>
-</thead>
-<tr v-for="i in PersonCertification" @click="handleRowClick(i)">
-  <td>{{ i.PersonID }}</td>
-  <td>{{ i.certificationID }}</td>
-  <td>{{ i.expirationDate }}</td>
-  <td>{{ i.startDate }}</td>
-</tr>
-</table>
 
-
-<!--
-MEMBER CERTIFICATION: CURRENT TABLE
--->
 <br>
-<p> Member Certifications: Current</p>
+<div id="memberCertApp">
+<p> Member Certifications</p>
   <table style="text-align:center;" class="col-xs-12 col-s-12 col-md-12 col-lg-12">
   <thead>
     <th>MID</th>
@@ -160,14 +138,14 @@ MEMBER CERTIFICATION: CURRENT TABLE
     <th>Start Date</th>
   </thead>
 
-  <tr v-for="i in PersonCertification" @click="handleRowClick(i)">
+  <tr v-for="i in memberCerts" @click="handleRowClick(i)">
     <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
   </tr>
   </table>
-
+</div>
 
 
 </main>
