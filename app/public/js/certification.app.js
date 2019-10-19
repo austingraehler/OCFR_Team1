@@ -45,4 +45,5 @@ var certificationApp = new Vue({
     this.handleSubmit();
     this.handleReset();
   }
+}
 });
