@@ -13,7 +13,7 @@ var memberCertApp = new Vue({
     fetchMemberCerts() {
       fetch('api/personCertification/index.php')
       .then(response => response.json())
-      .then(json => { memberCertApp.memberCerts = json })
+      .then(json => { memberCertApp.memberCerts = json });
     },
     handleSubmit(evt) {
 
