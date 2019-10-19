@@ -1,5 +1,5 @@
 var memberApp = new Vue({
-  el: '#memberCertApp',
+  el: '#memberApp',
   data: {
     members: [],
     memberData: {
@@ -22,7 +22,7 @@ var memberApp = new Vue({
     fetchMembers() {
       fetch('api/person/index.php')
       .then(response => response.json())
-      .then(json => { memberCertApp.members = json });
+      .then(json => { memberApp.members = json });
     },
     handleSubmit(evt) {
 
