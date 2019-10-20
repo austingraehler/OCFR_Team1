@@ -15,10 +15,10 @@ fetchCertifications() {
     .then(response => response.json())
     .then(json => { certificationApp.certifications = json })
   },
-handleSubmit(evt) {
-
-},
-handleSubmit() {
+// handleSubmit(evt) {
+//
+// },
+handleSubmit(event) {
     fetch('api/certification/post.php', {
         method:'POST',
         body: JSON.stringify(this.formData),
