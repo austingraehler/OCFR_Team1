@@ -42,9 +42,9 @@ handleReset() {
       standardExpiry: ''
               }
             },
+  },
   created() {
     this.fetchCertifications();
     this.handleReset();
   }
-}
 });
