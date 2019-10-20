@@ -2,11 +2,10 @@ var certForm = new Vue({
   el: '#certForm',
   formData: {
         certifications: [],
-        certData:{},
-        //cid: '',
-        //agency: '',
-        //name: '',
-        //expiry: '
+        cid: '',
+        agency: '',
+        name: '',
+        expiry: ''
   },
   methods: {
   fetchCertifications(){
@@ -21,7 +20,7 @@ var certForm = new Vue({
     this.certification.cid = this.personCertification.cid;
     fetch('api/certification/post.php', {
         method:'POST',
-        body: JSON.stringify(this.certData),
+        body: JSON.stringify(this.formData),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
