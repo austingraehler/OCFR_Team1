@@ -27,7 +27,7 @@ handleSubmit(event) {
         }
       })
       .then( response => response.json() )
-      .then( json => { certForm.certifications.push(json[0]) })
+      .then( json => { certificationApp.certifications.push(json[0]) })
       .catch( err => {
         console.error('CERTIFICATION POST ERROR:');
         console.error(err);
