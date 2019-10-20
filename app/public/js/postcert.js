@@ -26,7 +26,7 @@ var certForm = new Vue({
         }
       })
       .then( response => response.json() )
-      .then( json => { certForm.formData.push(json[0]) })
+      .then( json => { certForm.certifications.push(json[0]) })
       .catch( err => {
         console.error('CERTIFICATION POST ERROR:');
         console.error(err);

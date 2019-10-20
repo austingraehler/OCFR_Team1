@@ -10,16 +10,37 @@ var certificationApp = new Vue({
     }
   },
   methods: {
-    fetchCertifications() {
-      fetch('api/certification/index.php')
-      .then(response => response.json())
-      .then(json => { certificationApp.certifications = json });
-    },
-    handleSubmit(evt) {
-
-    }
-  }, // end methods
+fetchCertifications() {
+    fetch('api/certification/index.php')
+    .then(response => response.json())
+    .then(json => { certificationApp.certifications = json })
+  },
+handleSubmit(evt) {
+    fetch('api/certification/post.php', {
+        method:'POST',
+        body: JSON.stringify(this.formData),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => { certForm.certifications.push(json[0]) })
+      .catch( err => {
+        console.error('CERTIFICATION POST ERROR:');
+        console.error(err);
+    })
+        this.handleReset();
+      },
+handleReset() {
+    this.formData = {
+      certificationID: '',
+      agency: '',
+      certificationName: '',
+      standardExpiry: ''
+              }
+            },
   created() {
     this.fetchCertifications();
   }
+}
 });
