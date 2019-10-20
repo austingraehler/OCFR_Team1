@@ -44,6 +44,7 @@ handleReset() {
             },
   created() {
     this.fetchCertifications();
+    this.handleReset();
   }
 }
 });
