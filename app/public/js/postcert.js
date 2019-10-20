@@ -30,17 +30,20 @@ var certForm = new Vue({
       .catch( err => {
         console.error('CERTIFICATION POST ERROR:');
         console.error(err);
-  }
-},
+      })
+          this.handleReset();
+        },
   handleReset() {
       this.formData = {
         certificationID: '',
         agency: '',
         certificationName: '',
         standardExpiry: ''
-      },
+      }
+    },
   created() {
     this.handleSubmit();
     this.handleReset();
   }
+}
 });
