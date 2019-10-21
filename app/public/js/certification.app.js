@@ -3,10 +3,10 @@ var certificationApp = new Vue({
   data: {
     certifications: [],
     formData: {
-        cid: '',
-        agency: '',
-        name: '',
-        expiry: ''
+        // cid: '',
+        // agency: '',
+        // name: '',
+        // expiry: ''
     }
   },
   methods: {

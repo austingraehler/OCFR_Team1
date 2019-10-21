@@ -1,8 +1,8 @@
 <?php
 
 // Step 0: Validate data
-// use Ramsey\Uuid\Uuid;
-// $certificationID = Uuid::uuid4()->tostring();
+use Ramsey\Uuid\Uuid;
+$certificationID = Uuid::uuid4()->tostring();
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
 
@@ -23,4 +23,4 @@ $stmt->execute([
 
 // Step 4: Output
 header('HTTP/1.1 303 See Other');
-header('Location: ../records/?certificationID='.certificationID);
+header('Location: ../certification/?certificationID='.certificationID);
