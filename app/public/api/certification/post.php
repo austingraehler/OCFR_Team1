@@ -1,8 +1,8 @@
 <?php
 
 // Step 0: Validate data
-// use Ramsey\Uuid\Uuid;
-// $certificationID = Uuid::uuid4()->tostring();
+use Ramsey\Uuid\Uuid;
+$certificationID = Uuid::uuid4()->tostring();
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
 
