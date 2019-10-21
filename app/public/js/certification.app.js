@@ -28,23 +28,26 @@ handleSubmit(event) {
       })
       .then( response => response.json() )
       .then( json => { certificationApp.certifications.push(json[0]) })
-      .catch( err => {
-        console.error('CERTIFICATION POST ERROR:');
-        console.error(err);
-    })
-        this.handleReset();
-      },
+
+      this.handleReset();
+//      .catch( err => {
+//        console.error('CERTIFICATION POST ERROR:');
+//      console.error(err);
+},
 handleReset() {
     this.formData = {
       certificationID: '',
       agency: '',
       certificationName: '',
       standardExpiry: ''
-              }
-            },
+    }
   },
+  handleRowClick(certifications) {
+    certificationApp.certifications = certifications;
+    }
+},
   created() {
-    this.fetchCertifications();
     this.handleReset();
+    this.fetchCertifications();
   }
 });

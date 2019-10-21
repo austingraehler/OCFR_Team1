@@ -1,7 +1,8 @@
 <?php
 
 // Step 0: Validate data
-
+// use Ramsey\Uuid\Uuid;
+// $certificationID = Uuid::uuid4()->tostring();
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
 
@@ -14,6 +15,7 @@ $stmt = $db->prepare(
 
 $stmt->execute([
   $certificationID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
+  //$
   $_POST['agency'],
   $_POST['certificationName'],
   $_POST['standardExpiry'],
