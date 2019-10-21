@@ -6,13 +6,8 @@
         "name": "Team One"
     }],
     "require": {
-<<<<<<< HEAD
      "ramsey/uuid": "^3.8"
    },
-=======
-      "ramsey/uuid": "^3.8"
-    },
->>>>>>> 550a4e3917b4e93d7d01784ca7cdbc114d9602b2
     "autoload": {
         "classmap": ["class/DbConnection.php"]
     }
