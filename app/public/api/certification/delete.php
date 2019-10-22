@@ -8,19 +8,14 @@ $db = DbConnection::getConnection();
 
 // Step 2: Prepare & run the query
 $stmt = $db->prepare(
-'INSERT INTO Certification
-  (agency, certificationName, standardExpiry)
-  VALUES (?,?,?)'
+'DELETE FROM Certification
+  WHERE certificationID = ?'
 );
 
 $stmt->execute([
-  $_POST['agency'],
-  $_POST['certificationName'],
-  $_POST['standardExpiry'],
+  $_POST['certificationID']
 ]);
-
-$cid = $db->lastInsertId();
 
 // Step 4: Output
 header('HTTP/1.1 303 See Other');
-header('Location: ../certification/?certificationID='.$cid);
+header('Location: ../certification/');

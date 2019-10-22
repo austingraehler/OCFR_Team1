@@ -15,7 +15,7 @@ VALUES (?,?,?,?)'
 //do we use person or certification ID for this
 
 $stmt->execute([
-  $personID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
+  $_POST['personID'], // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
   $_POST['certificationID'],
   $_POST['expirationDate'],
   $_POST['startDate'],
@@ -23,4 +23,4 @@ $stmt->execute([
 
 // Step 4: Output
 header('HTTP/1.1 303 See Other');
-header('Location: ../personCertification/?personID='.personID);
+header('Location: ../personCertification/?personID='.$personID);

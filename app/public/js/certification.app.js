@@ -43,8 +43,13 @@ handleReset() {
     }
   },
   handleRowClick(certifications) {
-    certificationApp.certifications = certifications;
-    }
+// FIX THIS: certificationApp.certifications = certifications;
+  },
+  handleDelete(c) {
+    // TODO: fetch('api/cert/delete',
+    // {body: JSON.stringify({certificationID:c.certificationID})
+    //})
+  }
 },
   created() {
     this.handleReset();

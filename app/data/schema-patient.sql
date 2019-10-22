@@ -1,7 +1,13 @@
-CREATE SCHEMA OCFR
+--CREATE SCHEMA OCFR IF NOT EXISTS;
+USE OCFR;
+
+DROP TABLE IF EXISTS Person;
+DROP TABLE IF EXISTS Certification;
+DROP TABLE IF EXISTS PersonCertification;
+DROP TABLE IF EXISTS User;
 
 CREATE TABLE Person (
-personID INTEGER UNIQUE,
+personID INTEGER PRIMARY KEY AUTO_INCREMENT,
 firstName VARCHAR(64) NOT NULL,
 lastName VARCHAR(64) NOT NULL,
 address VARCHAR (100),
@@ -13,23 +19,22 @@ gender ENUM('Male', 'Female', 'Other') NOT NULL,
 position ENUM('Volunteer', 'Paramedic', 'Lieutenant', 'Captain', 'Battalion Chief', 'Fire Chief', 'Commissioner'),
 radioNumber VARCHAR(8),
 stationNumber INTEGER,
-isActive ENUM('Active', 'Not Active'),
-PRIMARY KEY (personID)
+isActive ENUM('Active', 'Not Active')
 );
 
 CREATE TABLE Certification (
-certificationID INTEGER UNIQUE,
+certificationID INTEGER PRIMARY KEY AUTO_INCREMENT,
 agency VARCHAR(64),
 certificationName VARCHAR(100) NOT NULL,
-standardExpiry INTEGER,
-PRIMARY KEY (certificationID)
+standardExpiry INTEGER
 );
 
 CREATE TABLE PersonCertification (
-personID INTEGER UNIQUE,
-certificationID INTEGER UNIQUE,
+personID INTEGER,
+certificationID INTEGER,
 expirationDate DATE,
 startDate DATE,
+FOREIGN KEY (personID) REFERENCES Person(PersonId) ON DELETE CASCADE,
 PRIMARY KEY (personID, certificationID)
 );
 

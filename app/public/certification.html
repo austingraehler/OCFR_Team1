@@ -84,6 +84,7 @@ CERTIFICATION LIST <table>
     <td>{{ c.agency }}</td>
     <td>{{ c.certificationName }}</td>
     <td>{{ c.standardExpiry }}</td>
+    <td><button class="deleteMe" @click="handleDelete(c)">Delete</button></td>
   </tr>
   </table>
 
