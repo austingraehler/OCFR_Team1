@@ -1,5 +1,4 @@
 <?php
-use Ramsey\Uuid\Uuid;
 
 // Step 0: Validate data
 
@@ -14,7 +13,6 @@ VALUES (?,?,?,?)'
 );
 
 //do we use person or certification ID for this
-$personID = Uuid::uuid4()->toString();
 
 $stmt->execute([
   $personID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
