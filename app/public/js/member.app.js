@@ -3,19 +3,7 @@ var memberApp = new Vue({
   data: {
     members: [],
     memberData: {
-      mid: '',
-      first: '',
-      last: '',
-      address: '',
-      email: '',
-      phone: '',
-      dob: '',
-      start: '',
-      gender: '',
-      position: '',
-      radio: '',
-      station: '',
-      status: ''
+
     }
   },
   methods: {
@@ -24,11 +12,42 @@ var memberApp = new Vue({
       .then(response => response.json())
       .then(json => { memberApp.members = json });
     },
-    handleSubmit(evt) {
+    handleSubmit(event) {
+      fetch('api/person/post.php', {
+          method:'POST',
+          body: JSON.stringify(this.memberData),
+          headers: {
+            "Content-Type": "application/json; charset=utf-8"
+          }
+        })
+        .then( response => response.json() )
+        .then( json => { memberApp.members.push(json[0]) })
 
-    }
-  }, // end methods
+        this.handleReset();
+    },
+    handleReset() {
+        this.memberData = {
+          personID: '',
+          firstName: '',
+          lastName: '',
+          address: '',
+          email: '',
+          phoneNumber: '',
+          dob: '',
+          startDate: '',
+          gender: '',
+          position: '',
+          radioNumber: '',
+          stationNumber: '',
+          isActive: ''
+        }
+      },
+      handleRowClick(members) {
+        memberApp.members = members;
+        }
+    },
   created() {
+    this.handleReset();
     this.fetchMembers();
   }
 });
