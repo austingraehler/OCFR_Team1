@@ -1,6 +1,6 @@
 <?php
 use Ramsey\Uuid\Uuid;
-
+$personID = Uuid::uuid4()->tostring();
 // Step 0: Validate data
 
 // Step 1: Get a datase connection from our help class
@@ -14,7 +14,7 @@ $stmt = $db->prepare(
 );
 
 
-$personID = Uuid::uuid4()->toString();
+//$personID = Uuid::uuid4()->toString();
 
 $stmt->execute([
   $personID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
