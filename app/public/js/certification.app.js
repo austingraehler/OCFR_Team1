@@ -46,9 +46,11 @@ handleReset() {
 // FIX THIS: certificationApp.certifications = certifications;
   },
   handleDelete(c) {
-    // TODO: fetch('api/cert/delete',
-    // {body: JSON.stringify({certificationID:c.certificationID})
-    //})
+  //  fetch('api/certification/delete.php',{
+  //  method: 'POST',
+  //  body: JSON.stringify(certificationID:c.certificationID),
+  //  headers: ""Content-Type": "application/json; charset=utf-8"
+  // })
   }
 },
   created() {
