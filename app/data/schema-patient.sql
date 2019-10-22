@@ -35,6 +35,7 @@ certificationID INTEGER,
 expirationDate DATE,
 startDate DATE,
 FOREIGN KEY (personID) REFERENCES Person(PersonId) ON DELETE CASCADE,
+FOREIGN KEY (certificationID) REFERENCES Certification(certificationID) ON DELETE CASCADE,
 PRIMARY KEY (personID, certificationID)
 );
 
