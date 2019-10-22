@@ -8,7 +8,7 @@ $db = DbConnection::getConnection();
 // Step 2: Prepare & run the query
 $stmt = $db->prepare(
 'INSERT INTO PersonCertification
-(personID, certificationID, expirationDate, startlDate)
+(personID, certificationID, expirationDate, startDate)
 VALUES (?,?,?,?)'
 );
 
