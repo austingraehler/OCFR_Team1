@@ -111,49 +111,56 @@
             <div class="form-group row">
               <label for="inputMIB" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputMIB" placeholder="Member ID" v-model="">
+                <input type="number" class="form-control" id="inputMIB" placeholder="Member ID" v-model="memberCertData.personID">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputFirstName" class="col-sm-2 col-lg-5 col-form-label">First Name</label>
               <div class="col-sm-2">
-                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" v-model="">
+                <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" v-model="memberCertData.firstName">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputLastName" class="col-sm-2 col-lg-5 col-form-label">Last Name</label>
               <div class="col-sm-2">
-                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" v-model="">
+                <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" v-model="memberCertData.lastName">
+              </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="inputAddress" class="col-sm-2 col-lg-5 col-form-label">Address</label>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputAddress" placeholder="Address" v-model="memberCertData.address">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputEmailAddress" class="col-sm-2 col-lg-5 col-form-label">Email Address</label>
               <div class="col-sm-2">
-                <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" v-model="">
+                <input type="email" class="form-control" id="inputEmailAddress" placeholder="Email Address" v-model="memberCertData.email">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputPhoneNumber" class="col-sm-2 col-lg-5 col-form-label">Phone Number</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" v-model="">
+                <input type="number" class="form-control" id="inputPhoneNumber" placeholder="Phone Number" v-model="memberCertData.phoneNumber">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputDoB" class="col-sm-2 col-lg-5 col-form-label">Date of Birth</label>
               <div class="col-sm-2">
-                <input type="date" class="form-control" id="inputDoB" placeholder="Date of Birth" v-model="">
+                <input type="date" class="form-control" id="inputDoB" placeholder="Date of Birth" v-model="memberCertData.dob">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputStartDate" class="col-sm-2 col-lg-5 col-form-label">Start Date</label>
               <div class="col-sm-2">
-                <input type="date" class="form-control" id="inputStartDate" placeholder="Start Date" v-model="">
+                <input type="date" class="form-control" id="inputStartDate" placeholder="Start Date" v-model="memberCertData.startDate">
               </div>
             </div>
 
@@ -161,17 +168,17 @@
               <label for="inputGender" class="col-sm-2 col-lg-5 col-form-label">Gender</label>
               <div class="col-sm-2">
                 <div>
-                  <input type="radio" id="huey" name="drone" value="huey">
+                  <input type="radio" id="huey" name="drone" value="huey" v-model="memberCertData.gender">
                   <label for="huey">Male</label>
                 </div>
 
                 <div>
-                  <input type="radio" id="dewey" name="drone" value="dewey">
+                  <input type="radio" id="dewey" name="drone" value="dewey" v-model="memberCertData.gender">
                   <label for="dewey">Female</label>
                 </div>
 
                 <div>
-                  <input type="radio" id="louie" name="drone" value="louie">
+                  <input type="radio" id="louie" name="drone" value="louie" v-model="memberCertData.gender">
                   <label for="louie">Other</label>
                 </div>
               </div>
@@ -180,41 +187,36 @@
             <div class="form-group row">
               <label for="inputPosition" class="col-sm-2 col-lg-5 col-form-label">Position</label>
               <div class="col-sm-2">
-                <div>
-                  <input type="radio" id="cap" name="cap" value="cap">
-                  <label for="huey">Captain</label>
-                </div>
-
-                <div>
-                  <input type="radio" id="batallion" name="chief" value="chief">
-                  <label for="chief">Batallion Chief</label>
-                </div>
-
-                <div>
-                  <input type="radio" id="fresponder" name="chief" value="chief">
-                  <label for="responder">First Responder</label>
-                </div>
+                <select name="position">
+                   <option value="volunteer" v-model="memberCertData.position">Volunteer</option>
+                   <option value="paramedic" v-model="memberCertData.position">Paramedic</option>
+                   <option value="lieutenant" v-model="memberCertData.position">Lieutenant</option>
+                   <option value="captain" v-model="memberCertData.position">Captain</option>
+                   <option value="batallionChief" v-model="memberCertData.position">Batallion Chief</option>
+                   <option value="fireChief" v-model="memberCertData.position">Fire Chief</option>
+                   <option value="comissioner" v-model="memberCertData.position">Comissioner</option>
+                 </select>
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputRadioNumber" class="col-sm-2 col-lg-5 col-form-label">Radio Number</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputRadioNumber" placeholder="Radio Number" v-model="">
+                <input type="number" class="form-control" id="inputRadioNumber" placeholder="Radio Number" v-model="memberCertData.radioNumber">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputStationNumber" class="col-sm-2 col-lg-5 col-form-label">Station Number</label>
               <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputStationNumber" placeholder="Station Number" v-model="">
+                <input type="number" class="form-control" id="inputStationNumber" placeholder="Station Number" v-model="memberCertData.stationNumber">
               </div>
             </div>
 
             <div class="form-group row">
               <label for="inputStatus" class="col-sm-2 col-lg-5 col-form-label">Status</label>
               <div class="col-sm-2">
-                <input type="text" class="form-control" id="inputStatus" placeholder="Status" v-model="">
+                <input type="text" class="form-control" id="inputStatus" placeholder="Status" v-model="memberCertData.isActive">
               </div>
             </div>
 
