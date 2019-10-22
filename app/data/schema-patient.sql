@@ -34,7 +34,7 @@ personID INTEGER,
 certificationID INTEGER,
 expirationDate DATE,
 startDate DATE,
-FOREIGN KEY (personID) REFERENCES Person(PersonId) ON DELETE CASCADE,
+FOREIGN KEY (personID) REFERENCES Person(personId) ON DELETE CASCADE,
 FOREIGN KEY (certificationID) REFERENCES Certification(certificationID) ON DELETE CASCADE,
 PRIMARY KEY (personID, certificationID)
 );
@@ -45,6 +45,9 @@ userEmail VARCHAR(64),
 password VARCHAR(64),
 PRIMARY KEY (userEmail)
 );
+
+INSERT INTO Person(personID, firstName, lastName, address, email, phoneNumber, dob, startDate, gender, position, radioNumber, stationNumber, isActive) VALUES
+("1", "Tom", "Gregory", "111 Kelley Street", "tomgreg@iu.edu", "1234567890", "1970-01-01", "2018-01-01", "Male", "Captain", "1", "2", "Active");
 
 
 INSERT INTO Certification(certificationID, agency, certificationName, standardExpiry) VALUES
@@ -58,7 +61,7 @@ INSERT INTO Certification (certificationID, agency, certificationName, standardE
 
 
 INSERT INTO PersonCertification (personID, certificationID, expirationDate, startDate) VALUES
-("0","190002","2023-09-08","2018-04-22"),
+("1","190002","2023-09-08","2018-04-22"),
 ("1","190003","2022-09-08","2018-05-22"),
-("2","190004","2021-09-08","2018-06-22"),
-("3","190005","2020-09-08","2018-07-22");
+("1","190004","2021-09-08","2018-06-22"),
+("1","190005","2020-09-08","2018-07-22");
