@@ -158,28 +158,28 @@ CERTIFICATION LIST <table>
       <div class="form-group row">
         <label for="inputCID" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
         <div class="col-sm-2">
-          <input type="number" class="form-control" id="inputCID" placeholder="Member ID" v-model="memberCerts.cid">
+          <input type="number" class="form-control" id="inputCID" placeholder="Member ID" v-model="memberCerts.personID">
         </div>
       </div>
 
       <div class="form-group row">
         <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">Certification ID</label>
         <div class="col-sm-2">
-          <input type="text" class="form-control" id="inputAgency" placeholder="Certification ID" v-model="memberCerts.agency">
+          <input type="text" class="form-control" id="inputAgency" placeholder="Certification ID" v-model="memberCerts.certificationID">
         </div>
       </div>
 
       <div class="form-group row">
         <label for="inputCertificationName" class="col-sm-2 col-lg-5 col-form-label">Expiration Date</label>
         <div class="col-sm-2">
-          <input type="date" class="form-control" id="inputCertificationName" placeholder="Expiration Date" v-model="memberCerts.name">
+          <input type="date" class="form-control" id="inputCertificationName" placeholder="Expiration Date" v-model="memberCerts.expirationDate">
         </div>
       </div>
 
       <div class="form-group row">
         <label for="inputStandardExpiry" class="col-sm-2 col-lg-5 col-form-label">Start Date</label>
         <div class="col-sm-2">
-          <input type="date" class="form-control" id="inputStandardExpiry" placeholder="Start Date" v-model="memberCerts.expiry">
+          <input type="date" class="form-control" id="inputStandardExpiry" placeholder="Start Date" v-model="memberCerts.startDate">
         </div>
       </div>
 
