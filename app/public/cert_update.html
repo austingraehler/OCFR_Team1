@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Oconee County Fire Rescue</title>
+<!--    Style sheet-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!--     jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+
+<!--   JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+  <header>
+
+          <h1> <img src="img/Emblem.png" class = "fade" height="150px" width="150">Oconee County Fire Rescue</h1>
+
+          <nav class="row navbar navbar-default navbar-custom">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                      <span class="icon-bar" style="color: black"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+              </div>
+
+              <div id="menu" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav">
+                      <li>
+                          <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                          <a href="certification.html">Certification Reports</a>
+                      </li>
+                      <li>
+                          <a href="reports.html">Member Reports</a>
+                      </li>
+                      <li>
+                          <a href="user_login.html">Member Login</a>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+
+
+  </header>
+
+
+
+<main>
+
+    <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Certification Reports</h2>
+
+
+
+
+
+
+<!--
+CERTIFICATION LIST <table>
+-->
+<br>
+<div  id="certificationApp">
+  <p> Update Certification </p>
+
+  <form class="formCenter" @submit.prevent="handleSubmit">
+
+      <div class="form-group row">
+        <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">{{ c.agency }}</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="inputAgency" placeholder="Agency" v-model="formData.agency">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputCertificationName" class="col-sm-2 col-lg-5 col-form-label">{{ c.certificationName }}</label>
+        <div class="col-sm-2">
+          <input type="text" class="form-control" id="inputCertificationName" placeholder="Certification Name" v-model="formData.certificationName">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="inputStandardExpiry" class="col-sm-2 col-lg-5 col-form-label">{{ c.standardExpiry }}</label>
+        <div class="col-sm-2">
+          <input type="number" class="form-control" id="inputStandardExpiry" placeholder="Standard Expiry" v-model="formData.standardExpiry">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="newCertification" class="col-sm-2 col-lg-5 col-form-label"></label>
+        <div class="col-sm-2">
+          <button type="submit" class="btn btn-primary">Submit New Certification</button>
+        </div>
+      </div>
+  </form>
+</div>
+
+</main>
+
+
+
+
+
+  <footer class="col-xs-12 col-s-12 col-md-12 col-lg-12">
+
+
+     <p class="caption"> Oconee County Fire Rescue (OCFR) | 123 Sesame Street| Oconee County, GA | (546) - 543-8991  </p>
+
+
+
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/certification.app.js"></script>
+  <script src="js/member_cert.app.js"></script>
+<!--  <script src="js/member.app.js"></script>
+-->
+</body>
+</html>
