@@ -18,7 +18,7 @@ $stmt = $db->prepare(
 
 $stmt->execute([
   //$personID, // i.e. 25769c6c-d34d-4bfe-ba98-e0ee856f3e7a
-  //$_POST['firstName'],
+  $_POST['firstName'],
   $_POST['lastName'],
   $_POST['address'],
   $_POST['email'],
