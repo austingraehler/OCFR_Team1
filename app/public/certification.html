@@ -145,6 +145,7 @@ CERTIFICATION LIST <table>
     <th>CID</th>
     <th>Expiration Date</th>
     <th>Start Date</th>
+    <th>Delete Member Certification</th>
   </thead>
 
   <tr v-for="i in memberCerts" @click="handleRowClick(i)">
@@ -152,6 +153,7 @@ CERTIFICATION LIST <table>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
+    <td><button class="deleteMe" @click="handleDelete(i)">Delete</button></td>
   </tr>
   </table>
 

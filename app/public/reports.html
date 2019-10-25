@@ -55,7 +55,7 @@
   </header>
 
 
-
+<!--   Member List -->
 <main>
 
     <h2 style="text-align: center;" class= "col-xs-12 col-s-12 col-md-12 col-lg-12">Member Reports</h2>
@@ -178,14 +178,14 @@
             <div class="form-group row">
               <label for="inputPosition" class="col-sm-2 col-lg-5 col-form-label">Position</label>
               <div class="col-sm-2">
-                <select name="position">
-                   <option value="volunteer" v-model="memberData.position">Volunteer</option>
-                   <option value="paramedic" v-model="memberData.position">Paramedic</option>
-                   <option value="lieutenant" v-model="memberData.position">Lieutenant</option>
-                   <option value="captain" v-model="memberData.position">Captain</option>
-                   <option value="batallionChief" v-model="memberData.position">Batallion Chief</option>
-                   <option value="fireChief" v-model="memberData.position">Fire Chief</option>
-                   <option value="comissioner" v-model="memberData.position">Comissioner</option>
+                <select name="position" v-model="memberData.position">
+                   <option value="volunteer">Volunteer</option>
+                   <option value="paramedic">Paramedic</option>
+                   <option value="lieutenant">Lieutenant</option>
+                   <option value="captain">Captain</option>
+                   <option value="batallionChief">Batallion Chief</option>
+                   <option value="fireChief">Fire Chief</option>
+                   <option value="comissioner" >Comissioner</option>
                  </select>
               </div>
             </div>
@@ -209,12 +209,12 @@
                 <div class="col-sm-2">
                   <div>
                   <input type="radio" id="yes" name="yes" value="yes" v-model="memberData.isActive">
-                  <label for="huey">Active</label>
+                  <label for="active">Active</label>
                   </div>
 
                 <div>
                   <input type="radio" id="no" name="no" value="no" v-model="memberData.isActive">
-                  <label for="dewey">Not Active</label>
+                  <label for="notactive">Not Active</label>
                 </div>
             </div>
           </div>
