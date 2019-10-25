@@ -46,12 +46,21 @@ handleReset() {
 // FIX THIS: certificationApp.certifications = certifications;
   },
   handleDelete(c) {
-  //  fetch('api/certification/delete.php',{
-  //  method: 'POST',
-  //  body: JSON.stringify(certificationID:c.certificationID),
-  //  headers: ""Content-Type": "application/json; charset=utf-8"
-  // })
-  }
+   this.deleteCert=c;
+   fetch('api/certification/delete.php', {
+   method: 'POST',
+   body: JSON.stringify(this.deleteCert),
+   headers: {
+     "Content-Type": "application/json; charset=utf-8"
+   }
+   })
+   .then( response => response.json() )
+   .then(json => {certificationApp.certifications = json})
+   .then(response => {alert('Are you sure you want to delete 1 record?')})
+   this.handleReset();
+}
+
+
 },
   created() {
     this.handleReset();
