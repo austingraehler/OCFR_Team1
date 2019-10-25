@@ -77,6 +77,8 @@
     <th>Radio Number</th>
     <th>Station Number</th>
     <th>Status</th>
+    <th>Update Member</th>
+    <th>Delete Member</th>
   </thead>
   <tr v-for="p in members" @click="handleRowClick(p)">
     <td>{{ p.personID }}</td>
@@ -92,6 +94,8 @@
     <td>{{ p.radioNumber }}</td>
     <td>{{ p.stationNumber }}</td>
     <td>{{ p.isActive }}</td>
+    <td><button class="updateMe" @click="handleUpdate(p)">Update</button></td>
+    <td><button class="deleteMe" @click="handleDelete(p)">Delete</button></td>
   </tr>
 </table>
 
@@ -99,12 +103,6 @@
 <br>
 <p> Add Member </p>
 <form class="formCenter" @submit.prevent="handleSubmit">
-            <div class="form-group row">
-              <label for="inputMIB" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
-              <div class="col-sm-2">
-                <input type="number" class="form-control" id="inputMIB" placeholder="Member ID" v-model="memberData.personID">
-              </div>
-            </div>
 
             <div class="form-group row">
               <label for="inputFirstName" class="col-sm-2 col-lg-5 col-form-label">First Name</label>
