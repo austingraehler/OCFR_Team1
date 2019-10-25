@@ -78,6 +78,7 @@ CERTIFICATION LIST <table>
     <th>Agency</th>
     <th>Certification Name</th>
     <th>Standard Expiration Period (years)</th>
+    <th>Update Certification</th>
     <th>Delete Certification</th>
   </thead>
   <tr v-for="c in certifications" @click="handleRowClick(c)">
@@ -85,6 +86,7 @@ CERTIFICATION LIST <table>
     <td>{{ c.agency }}</td>
     <td>{{ c.certificationName }}</td>
     <td>{{ c.standardExpiry }}</td>
+    <td><button class="updateMe" @click="handleUpdate(c)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(c)">Delete</button></td>
   </tr>
   </table>
