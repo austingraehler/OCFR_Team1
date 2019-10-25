@@ -43,9 +43,9 @@ var memberApp = new Vue({
         }
       },
       handleRowClick(members) {
-        memberApp.members = members;
+    //    memberApp.members = members;
       },
-      handleDelete(i) {
+      handleDelete(p) {
         this.deletePerson=p;
         fetch('api/person/delete.php', {
         method: 'POST',
