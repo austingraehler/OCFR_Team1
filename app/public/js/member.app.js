@@ -44,7 +44,21 @@ var memberApp = new Vue({
       },
       handleRowClick(members) {
         memberApp.members = members;
+      },
+      handleDelete(i) {
+        this.deletePerson=p;
+        fetch('api/person/delete.php', {
+        method: 'POST',
+        body: JSON.stringify(this.deletePerson),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
         }
+        })
+        .then( response => response.json() )
+        .then(json => {memberApp.members = json})
+        .then(response => {alert('Are you sure you want to delete 1 member?')})
+        this.handleReset();
+      }
     },
   created() {
     this.handleReset();
