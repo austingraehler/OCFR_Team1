@@ -58,8 +58,23 @@ handleReset() {
    .then(json => {certificationApp.certifications = json})
    .then(response => {alert('Are you sure you want to delete 1 record?')})
    this.handleReset();
-}
+},
 
+//Below is the failed code of Cole's Update js
+handleEdit(c) {
+  this.updateCert=c;
+   fetch('api/certification/update.php', {
+     method: 'POST',
+     body: JSON.stringify(this.updateCert),
+     headers: {
+       "Content-Type": "application/json; charset=utf-8"
+     }
+     })
+     .then( response => response.json() )
+     .then(json => {certificationApp.certifications = json [0] })
+     .then(response => {alert('Are you sure you want to update record?')})
+     this.handleReset();
+  },
 
 },
   created() {
