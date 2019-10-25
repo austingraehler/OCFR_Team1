@@ -77,6 +77,7 @@
     <th>Radio Number</th>
     <th>Station Number</th>
     <th>Status</th>
+    <th>Update Member</th>
     <th>Delete Member</th>
   </thead>
   <tr v-for="p in members" @click="handleRowClick(p)">
@@ -93,6 +94,7 @@
     <td>{{ p.radioNumber }}</td>
     <td>{{ p.stationNumber }}</td>
     <td>{{ p.isActive }}</td>
+    <td><button class="updateMe" @click="handleUpdate(p)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(p)">Delete</button></td>
   </tr>
 </table>
