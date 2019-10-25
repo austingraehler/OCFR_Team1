@@ -71,7 +71,7 @@ handleEdit(c) {
      }
      })
      .then( response => response.json() )
-     .then(json => {certificationApp.certifications = json [0] })
+     .then(json => {certificationApp.certifications = json})
      .then(response => {alert('Are you sure you want to update record?')})
      this.handleReset();
   },
