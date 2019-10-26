@@ -7,7 +7,10 @@ var certificationApp = new Vue({
         // agency: '',
         // name: '',
         // expiry: ''
-    }
+    },
+    filter: {
+     certificationID: ''
+   },
   },
   methods: {
 fetchCertifications() {
