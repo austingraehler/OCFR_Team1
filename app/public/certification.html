@@ -157,6 +157,13 @@ CERTIFICATION LIST <table>
       <div class="form-group row">
         <label for="inputCID" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
         <div class="col-sm-2">
+          //attempt at static dropdown; look to add dynamic values later
+          <select class ="cid">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
           <input type="number" class="form-control" id="inputCID" placeholder="Member ID" v-model="memberCertData.personID">
         </div>
       </div>
@@ -164,6 +171,13 @@ CERTIFICATION LIST <table>
       <div class="form-group row">
         <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">Certification ID</label>
         <div class="col-sm-2">
+          //attempt at static dropdown; look to add dynamic values later
+          <select class ="cid">
+            <option value="190002">190002</option>
+            <option value="190003">190003</option>
+            <option value="190004">190004</option>
+            <option value="190005">190005</option>
+          </select>
           <input type="text" class="form-control" id="inputAgency" placeholder="Certification ID" v-model="memberCertData.certificationID">
         </div>
       </div>
