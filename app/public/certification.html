@@ -83,10 +83,10 @@ CERTIFICATION LIST <table>
   </thead>
   <tr v-for="c in certifications" @click="handleRowClick(c)">
     <td>{{ c.certificationID }}</td>
-    <td>{{ c.agency }}</td>
-    <td>{{ c.certificationName }}</td>
-    <td>{{ c.standardExpiry }}</td>
-    <td><button class="updateMe" @click="handleUpdate(c)">Update</button></td>
+    <td contenteditable="true">{{ c.agency }}</td>
+    <td contenteditable="true">{{ c.certificationName }}</td>
+    <td contenteditable="true">{{ c.standardExpiry }}</td>
+    <td><button class="updateMe" @click="handleEdit(c)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(c)">Delete</button></td>
   </tr>
   </table>

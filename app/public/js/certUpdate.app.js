@@ -10,10 +10,10 @@ var certUpdate = new Vue({
     }
   },
   methods: {
-    getCert() {
-      var params = (new URL(document.location)).searchParams;
-      this.id.certificationID = params.get("certificationID ");
-    },
+    // getCert() {
+    //   var params = (new URL(document.location)).searchParams;
+    //   this.id.certificationID = params.get("certificationID ");
+    // },
     handleEdit(c) {
       this.updateCert=c;
        fetch('api/certification/update.php', {
