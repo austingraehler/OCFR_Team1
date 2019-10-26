@@ -93,6 +93,7 @@ CERTIFICATION LIST <table>
 
   <form class="formCenter" @submit.prevent="handleSubmit">
 
+
       <div class="form-group row">
         <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">Agency</label>
         <div class="col-sm-2">
@@ -151,11 +152,15 @@ CERTIFICATION LIST <table>
     <th>Delete Member Certification</th>
   </thead>
 
+
   <tr v-for="i in memberCerts" @click="handleRowClick(i)">
     <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
+    <!-- we belive this API is running before the data is sent to our database-->
+    <!-- that's why we get a errer message when we submit -->
+    <!-- Data would show up after we refresh the page -->
     <td><button class="deleteMe" @click="handleDelete(i)">Delete</button></td>
   </tr>
   </table>
@@ -201,6 +206,7 @@ CERTIFICATION LIST <table>
         </div>
       </div>
   </form>
+
 </div>
 
 </main>
