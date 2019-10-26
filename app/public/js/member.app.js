@@ -2,12 +2,12 @@ var memberApp = new Vue({
   el: '#memberApp',
   data: {
     members: [],
-    memberData: {
-
-    },
     filter: {
      personID: ''
    },
+    memberData: {
+      
+    },
   },
   methods: {
     fetchMembers() {
