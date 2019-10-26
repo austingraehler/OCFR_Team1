@@ -83,15 +83,16 @@ CERTIFICATION LIST <table>
   </thead>
   <tr v-for="c in certifications" @click="handleRowClick(c)">
     <td>{{ c.certificationID }}</td>
-    <td>{{ c.agency }}</td>
-    <td>{{ c.certificationName }}</td>
-    <td>{{ c.standardExpiry }}</td>
-    <td><button class="updateMe" @click="handleUpdate(c)">Update</button></td>
+    <td contenteditable="true">{{ c.agency }}</td>
+    <td contenteditable="true">{{ c.certificationName }}</td>
+    <td contenteditable="true">{{ c.standardExpiry }}</td>
+    <td><button class="updateMe" @click="handleEdit(c)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(c)">Delete</button></td>
   </tr>
   </table>
 
   <form class="formCenter" @submit.prevent="handleSubmit">
+
 
       <div class="form-group row">
         <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">Agency</label>
@@ -150,11 +151,15 @@ CERTIFICATION LIST <table>
     <th>Delete Member Certification</th>
   </thead>
 
+
   <tr v-for="i in memberCerts" @click="handleRowClick(i)">
     <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
+    <!-- we belive this API is running before the data is sent to our database-->
+    <!-- that's why we get a errer message when we submit -->
+    <!-- Data would show up after we refresh the page -->
     <td><button class="deleteMe" @click="handleDelete(i)">Delete</button></td>
   </tr>
   </table>
@@ -206,6 +211,7 @@ CERTIFICATION LIST <table>
         </div>
       </div>
   </form>
+
 </div>
 
 </main>
