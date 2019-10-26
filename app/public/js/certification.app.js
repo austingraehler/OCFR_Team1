@@ -2,15 +2,15 @@ var certificationApp = new Vue({
   el: '#certificationApp',
   data: {
     certifications: [],
+    filter: {
+     certificationID: ''
+   },
     formData: {
         // cid: '',
         // agency: '',
         // name: '',
         // expiry: ''
     },
-    filter: {
-     certificationID: ''
-   },
   },
   methods: {
 fetchCertifications() {
