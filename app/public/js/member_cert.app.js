@@ -24,7 +24,7 @@ var memberCertApp = new Vue({
           }
         })
         .then( response => response.json() )
-        .then( json => { certificationApp.memberCerts.push(json[0]) })
+        .then( json => { memberCertApp.memberCerts.push(json[0]) })
 
         this.handleReset();
 },
@@ -37,7 +37,7 @@ handleReset() {
   }
 },
 handleRowClick(memberCerts) {
-  memberCertApp.memberCerts = memberCerts;
+  // memberCertApp.memberCerts = memberCerts;
   }
 },
   created() {
