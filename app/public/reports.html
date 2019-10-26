@@ -82,23 +82,27 @@
   </thead>
   <tr v-for="p in members" @click="handleRowClick(p)">
     <td>{{ p.personID }}</td>
-    <td>{{ p.firstName }}</td>
-    <td>{{ p.lastName }}</td>
-    <td>{{ p.address }}</td>
-    <td>{{ p.email }}</td>
-    <td>{{ p.phoneNumber }}</td>
-    <td>{{ p.dob }}</td>
-    <td>{{ p.startDate }}</td>
-    <td>{{ p.gender }}</td>
-    <td>{{ p.position }}</td>
-    <td>{{ p.radioNumber }}</td>
-    <td>{{ p.stationNumber }}</td>
-    <td>{{ p.isActive }}</td>
+    <td contenteditable="true">{{ p.firstName }}</td>
+    <td contenteditable="true">{{ p.lastName }}</td>
+    <td contenteditable="true">{{ p.address }}</td>
+    <td contenteditable="true">{{ p.email }}</td>
+    <td contenteditable="true">{{ p.phoneNumber }}</td>
+    <td contenteditable="true">{{ p.dob }}</td>
+    <td contenteditable="true">{{ p.startDate }}</td>
+    <td contenteditable="true">{{ p.gender }}</td>
+    <td contenteditable="true">{{ p.position }}</td>
+    <td contenteditable="true">{{ p.radioNumber }}</td>
+    <td contenteditable="true">{{ p.stationNumber }}</td>
+    <td contenteditable="true">{{ p.isActive }}</td>
     <td><button class="updateMe" @click="handleUpdate(p)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(p)">Delete</button></td>
   </tr>
 </table>
-
+<div class="form-group row">
+  <label for="exportData" class="col-sm-2 col-lg-5 col-form-label"></label>
+  <button class="btn btn-primary" onclick="export_table_to_csv()">Export Table Data to CSV</button>
+  <!-- Code Taken From: https://codepen.io/malahovks/pen/gLxLWX -->
+</div>
 <br>
 <br>
 <p> Add Member </p>
@@ -241,6 +245,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/member.app.js"></script>
+  <script src="js/exportExcel.app.js"></script>
 
 </body>
 </html>

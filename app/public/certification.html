@@ -83,10 +83,10 @@ CERTIFICATION LIST <table>
   </thead>
   <tr v-for="c in certifications" @click="handleRowClick(c)">
     <td>{{ c.certificationID }}</td>
-    <td>{{ c.agency }}</td>
-    <td>{{ c.certificationName }}</td>
-    <td>{{ c.standardExpiry }}</td>
-    <td><button class="updateMe" @click="handleUpdate(c)">Update</button></td>
+    <td contenteditable="true">{{ c.agency }}</td>
+    <td contenteditable="true">{{ c.certificationName }}</td>
+    <td contenteditable="true">{{ c.standardExpiry }}</td>
+    <td><button class="updateMe" @click="handleEdit(c)">Update</button></td>
     <td><button class="deleteMe" @click="handleDelete(c)">Delete</button></td>
   </tr>
   </table>
@@ -123,12 +123,11 @@ CERTIFICATION LIST <table>
       </div>
   </form>
 </div>
-</div class="form-group row">
+<div class="form-group row">
   <label for="exportData" class="col-sm-2 col-lg-5 col-form-label"></label>
   <button class="btn btn-primary" onclick="export_table_to_csv(certData)">Export Table Data to CSV</button>
   <!-- Code Taken From: https://codepen.io/malahovks/pen/gLxLWX -->
-<div>
-
+</div>
 <br>
 <!-- <div id="exportExcel">
 <button class="col-sm-2 col-lg-5 col-form-label" onclick="export_table_to_csv(certData)">Export Table Data to CSV</button>

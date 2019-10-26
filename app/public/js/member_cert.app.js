@@ -2,6 +2,10 @@ var memberCertApp = new Vue({
   el: '#memberCertApp',
   data: {
     memberCerts: [],
+    filter: {
+     personID: '',
+     certificationID: ''
+   },
     memberCertData: {
     //  mid: '',
     //  cid: '',
