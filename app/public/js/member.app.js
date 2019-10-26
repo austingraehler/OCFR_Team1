@@ -4,7 +4,10 @@ var memberApp = new Vue({
     members: [],
     memberData: {
 
-    }
+    },
+    filter: {
+     personID: ''
+   },
   },
   methods: {
     fetchMembers() {
