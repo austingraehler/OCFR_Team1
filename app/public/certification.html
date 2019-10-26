@@ -170,10 +170,7 @@ CERTIFICATION LIST <table>
         <label for="inputCID" class="col-sm-2 col-lg-5 col-form-label">Member ID</label>
         <div class="col-sm-2">
           <!--attempt at dynamic dropdown -->
-          <select v-model="filter.member">
-                          <option value=""> Member List</option>
-                          <option v-for="c in member">{{ c.personID }}</option>
-          </select>
+          <input type="number" class="form-control" id="inputCID" placeholder="Member ID" v-model="memberCertData.personID">
           <!--attempt at dynamic dropdown -->
         </div>
       </div>
@@ -182,10 +179,7 @@ CERTIFICATION LIST <table>
         <label for="inputAgency" class="col-sm-2 col-lg-5 col-form-label">Certification ID</label>
         <div class="col-sm-2">
           <!--attempt at dynamic dropdown -->
-        <select v-model="filter.cert">
-                          <option value=""> Certification List</option>
-                          <option v-for="c in certifications">{{ c.certificationID }}</option>
-          </select>
+      <input type="text" class="form-control" id="inputAgency" placeholder="Certification ID" v-model="memberCertData.certificationID">
           <!--attempt at dynamic dropdown -->
         </div>
       </div>
