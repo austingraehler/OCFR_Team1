@@ -98,7 +98,11 @@
     <td><button class="deleteMe" @click="handleDelete(p)">Delete</button></td>
   </tr>
 </table>
-
+<div class="form-group row">
+  <label for="exportData" class="col-sm-2 col-lg-5 col-form-label"></label>
+  <button class="btn btn-primary" onclick="export_table_to_csv()">Export Table Data to CSV</button>
+  <!-- Code Taken From: https://codepen.io/malahovks/pen/gLxLWX -->
+</div>
 <br>
 <br>
 <p> Add Member </p>
@@ -241,6 +245,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="js/member.app.js"></script>
+  <script src="js/exportExcel.app.js"></script>
 
 </body>
 </html>
