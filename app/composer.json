@@ -1,6 +1,6 @@
 {
-    "name": "iu-msis/project-triage",
-    "description": "An in-class example project",
+    "name": "/var/www/OCFR_Team1/app",
+    "description": "Team 1 Final Project",
     "license": "private",
     "authors": [{
         "name": "Team One"
