@@ -1,5 +1,5 @@
 {
-    "name": "/var/www/OCFR_Team1/app",
+    "name": "/var/www/OCFR_Team1/app/public",
     "description": "Team 1 Final Project",
     "license": "private",
     "authors": [{
