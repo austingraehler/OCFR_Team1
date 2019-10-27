@@ -63,7 +63,7 @@ var memberApp = new Vue({
         this.handleReset();
       },
       handleEdit(p) {
-        this.updateMem=c;
+        this.updateMem=p;
          fetch('api/person/update.php', {
            method: 'POST',
            body: JSON.stringify(this.updateMem),

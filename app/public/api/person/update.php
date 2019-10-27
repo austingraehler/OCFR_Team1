@@ -5,11 +5,13 @@ $db = DbConnection::getConnection();
 
 // if (isset($_POST['personID']) && $_POST['personID']!='') {
   $stmt = $db->prepare(
-    'UPDATE memberApp set personID = ?, firstName = ?, lastName = ?, address = ?,
+    'UPDATE Person set personID = ?, firstName = ?, lastName = ?, address = ?,
     email = ?, phoneNumber = ?, dob = ?, startDate = ?, gender = ?, position = ?,
     radioNumber = ?, stationNumber = ?, isActive = ?
     where personID = ?'
   );
+
+  $personID = $_POST['personID'];
 
   $stmt->execute([
     $_POST['firstName'],
@@ -26,6 +28,8 @@ $db = DbConnection::getConnection();
     $_POST['isActive'],
     $_POST['personID']
   ]);
+
+$mid = $db->lastInsertId();
 
   header('HTTP/1.1 303 See Other');
   header('Location: ../person/?personID='.$personID);
