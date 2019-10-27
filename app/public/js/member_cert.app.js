@@ -11,7 +11,10 @@ var memberCertApp = new Vue({
     //  cid: '',
     //  date: '',
     //  start: ''
-    }
+  },
+   filter:{
+     certification:''
+   }
   },
     methods: {
   fetchMemberCerts() {
@@ -44,6 +47,7 @@ handleRowClick(memberCerts) {
   // memberCertApp.memberCerts = memberCerts;
   }
 },
+
   created() {
     this.handleReset();
     this.fetchMemberCerts();
