@@ -45,9 +45,24 @@ handleReset() {
 },
 handleRowClick(memberCerts) {
   // memberCertApp.memberCerts = memberCerts;
-  }
 },
 
+handleDelete(i) {
+ this.deleteMemCert=i;
+ fetch('api/personCertification/delete.php', {
+ method: 'POST',
+ body: JSON.stringify(this.deleteMemCert),
+ headers: {
+   "Content-Type": "application/json; charset=utf-8"
+ },
+})
+ .then( response => response.json() )
+ .then(json => {memberCertApp.memberCerts = json})
+ .then(response => {alert('Are you sure you want to delete 1 record?')})
+ this.handleReset();
+},
+
+},
   created() {
     this.handleReset();
     this.fetchMemberCerts();
