@@ -72,7 +72,7 @@ var memberApp = new Vue({
            }
            })
            .then( response => response.json() )
-           .then(json => {memberApp.memberss = json})
+           .then(json => {memberApp.members = json})
            .then(response => {alert('Are you sure you want to update 1 record?')})
            this.handleReset();
         },
