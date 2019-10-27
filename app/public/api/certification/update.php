@@ -14,7 +14,8 @@ $db = DbConnection::getConnection();
   $stmt->execute([
     $_POST['agency'],
     $_POST['certificationName'],
-    $_POST['standardExpiry']
+    $_POST['standardExpiry'],
+    $_POST['certificationID']
   ]);
 
   header('HTTP/1.1 303 See Other');
