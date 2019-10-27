@@ -148,15 +148,31 @@ CERTIFICATION LIST <table>
     <th>CID</th>
     <th>Expiration Date</th>
     <th>Start Date</th>
+    <th>Status</th>
     <th>Delete Member Certification</th>
   </thead>
 
+  <div class="filter">
+    <p>Certification ID</p>
+    <p>
+      <select v-model= filter.certification>
+      <option value=''>(all)</option>
+      <option>190002</option>
+      <option>190004</option>
+      <option>190005</option>
+      <option>190020</option>
+      <option>190022</option>
+    </p>
 
-  <tr v-for="i in memberCerts" @click="handleRowClick(i)">
+  </div>
+  <tr v-for="i in memberCerts" @click="handleRowClick(i)"
+  v-show="filter.certification=='' || filter.certification== i.certificationID">
     <td>{{ i.personID }}</td>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
+    <!-- <td v-if="new Date(i.expirationDate <= new Date()">Expired</td>
+    <td v-else> Valid</td> -->
     <!-- we belive this API is running before the data is sent to our database-->
     <!-- that's why we get a errer message when we submit -->
     <!-- Data would show up after we refresh the page -->
