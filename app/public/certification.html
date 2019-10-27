@@ -171,8 +171,9 @@ CERTIFICATION LIST <table>
     <td>{{ i.certificationID }}</td>
     <td>{{ i.expirationDate }}</td>
     <td>{{ i.startDate }}</td>
-    <!-- <td v-if="new Date(i.expirationDate <= new Date()">Expired</td>
-    <td v-else> Valid</td> -->
+    <td v-if="new Date(i.expirationDate) <= new Date()">Expired</td>
+    <td v-else> Valid</td>
+
     <!-- we belive this API is running before the data is sent to our database-->
     <!-- that's why we get a errer message when we submit -->
     <!-- Data would show up after we refresh the page -->
