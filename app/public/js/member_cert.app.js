@@ -3,8 +3,8 @@ var memberCertApp = new Vue({
   data: {
     memberCerts: [],
     getJoins:[],
-    filterCert:'all',
-    filterUsers:'all',
+    // filterCert:'all',
+    // filterUsers:'all',
     filter: {
      personID: '',
      certificationID: ''
