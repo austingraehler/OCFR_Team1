@@ -6,7 +6,7 @@ var memberApp = new Vue({
      personID: ''
    },
     memberData: {
-      
+
     },
   },
   methods: {
@@ -61,7 +61,21 @@ var memberApp = new Vue({
         .then(json => {memberApp.members = json})
         .then(response => {alert('Are you sure you want to delete 1 member?')})
         this.handleReset();
-      }
+      },
+      handleEdit(p) {
+        this.updateMem=p;
+         fetch('api/person/update.php', {
+           method: 'POST',
+           body: JSON.stringify(this.updateMem),
+           headers: {
+             "Content-Type": "application/json; charset=utf-8"
+           }
+           })
+           .then( response => response.json() )
+           .then(json => {memberApp.members = json})
+           .then(response => {alert('Are you sure you want to update 1 record?')})
+           this.handleReset();
+        },
     },
   created() {
     this.handleReset();

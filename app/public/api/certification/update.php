@@ -14,8 +14,11 @@ $db = DbConnection::getConnection();
   $stmt->execute([
     $_POST['agency'],
     $_POST['certificationName'],
-    $_POST['standardExpiry']
+    $_POST['standardExpiry'],
+    $_POST['certificationID']
   ]);
+
+$cid = $db->lastInsertId();
 
   header('HTTP/1.1 303 See Other');
   header('Location: ../certification/?certificationID='.$certificationID);
